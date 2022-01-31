@@ -1,2 +1,2 @@
 !/bin/bsah
-tr -s "A" "Z" | "c" "e" 
+tr Ac Ze 
