@@ -1,0 +1,2 @@
+#!/bin/bsah
+tr "A" "Z" | "c" "e" 
