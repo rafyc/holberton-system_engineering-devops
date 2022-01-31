@@ -1,2 +1,2 @@
-#!/bash/bin
+#!/bin/bash
 grep "bin" /etc/passwrd | wc -l
