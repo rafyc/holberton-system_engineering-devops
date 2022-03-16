@@ -2,7 +2,7 @@
     <img width="20%" height="20%" src="https://blog.holbertonschool.com/wp-content/uploads/2020/04/unnamed-2.png"
 </p>
 
-# Project holberton-system_engineering-devops :woman_student:
+# Project holberton-system_engineering-devops 👨‍🎓:
 
 This repository contains files written for Shell. It's my second project at Holberton School Laval. 
 
