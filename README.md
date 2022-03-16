@@ -17,4 +17,4 @@ The list of projects contained follows :
 
 ## Author :black_nib:
 
-* __Raphaël CHEMOUNI__
+* _Raphaël CHEMOUNI_
