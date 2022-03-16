@@ -17,4 +17,4 @@ The list of projects contained follows :
 
 ## Author :black_nib:
 
-* __Elodie RIOU__
+* __Raphaël CHEMOUNI__
