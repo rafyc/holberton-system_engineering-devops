@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="50%" height="200" src="https://getlogovector.com/wp-content/uploads/2020/11/holberton-school-logo-vector.png"
+    <img width="20%" height="20%" src="https://blog.holbertonschool.com/wp-content/uploads/2020/04/unnamed-2.png"
 </p>
 
 # Project holberton-system_engineering-devops :woman_student:
