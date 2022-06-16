@@ -6,5 +6,5 @@
 
 for entry in *
 do
-  echo "$entry"
+  echo $entry
 done
