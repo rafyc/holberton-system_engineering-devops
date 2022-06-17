@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#Write a Bash script that stops 4-to_infinity_and_beyond process.
 i=$(pgrep -f 4-to_infinity_and_beyond)
 kill "$i"
