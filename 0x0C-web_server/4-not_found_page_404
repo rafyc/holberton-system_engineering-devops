@@ -6,7 +6,7 @@ apt-get -y upgrade
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/error.html
 sed -i '/server_name _;/a location /redirect_me { rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlwu4/ permanent; }' /etc/nginx/sites-available/default
 sed -i '/server_name _;/a error_page 404 /error.html;\nlocation = /error.html {\nroot /var/www/html;\ninternal;\n}' /etc/nginx/sites-available/default
-
 service nginx restart
