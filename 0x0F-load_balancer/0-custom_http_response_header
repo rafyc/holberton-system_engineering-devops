@@ -6,5 +6,5 @@ apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /var/www/html/error.html
-sed -i "/server {/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+sed -i "/server_name _;/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
 service nginx restart
