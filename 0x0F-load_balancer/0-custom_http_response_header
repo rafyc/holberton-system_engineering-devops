@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02
+apt-get update
+apt-get -y upgrade
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Hello World" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/error.html
+sed -i "/server {/a add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+service nginx restart
