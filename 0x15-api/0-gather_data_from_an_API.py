@@ -4,12 +4,13 @@ returns information about his todo list progress.
 '''
 if __name__ == "__main__":
 
-    from sys import argv
     import requests
+    from sys import argv
+
 
     urlUser = 'https://jsonplaceholder.typicode.com/users/' + argv[1]
     response_name = requests.get(urlUser)
-    name = response_name.json()['username']
+    name = response_name.json()['name']
 
     urlTodo = urlUser + '/todos'
     response_todos = requests.get(urlTodo)
