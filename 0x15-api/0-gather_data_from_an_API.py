@@ -26,4 +26,4 @@ if __name__ == "__main__":
     for element in task:
         if element['completed'] is True:
             task_name = element['title']
-            print("\t{}".format(task_name))
+            print("\t {}".format(task_name))
