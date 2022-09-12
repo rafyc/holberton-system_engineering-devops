@@ -4,8 +4,9 @@ returns information about his todo list progress.
 '''
 if __name__ == "__main__":
 
-    import requests
     from sys import argv
+    import requests
+
 
 
     urlUser = 'https://jsonplaceholder.typicode.com/users/' + argv[1]
