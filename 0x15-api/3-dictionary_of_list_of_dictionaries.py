@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+'''
+Python script to export data in the JSON format.
+'''
 
 if __name__ == "__main__":
 
-    from sys import argv
-    import requests
     import json
+    import requests
+    from sys import argv
+
 
     urlUser = 'https://jsonplaceholder.typicode.com/users/'
     all_user = requests.get(urlUser).json()
