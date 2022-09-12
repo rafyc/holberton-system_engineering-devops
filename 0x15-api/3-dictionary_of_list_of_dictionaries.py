@@ -9,7 +9,6 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-
     urlUser = 'https://jsonplaceholder.typicode.com/users/'
     all_user = requests.get(urlUser).json()
     dico = {}
