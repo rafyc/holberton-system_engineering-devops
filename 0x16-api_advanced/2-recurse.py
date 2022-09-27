@@ -1,27 +1,28 @@
 #!/usr/bin/python3
-'''function that queries the Reddit API and returns a list containing
-the titles of all hot articles for a given subreddit'''
-
+'''function that queries the Reddit API and returns the number of subscribers
+(not active users, total subscribers) for a given subreddit. If an invalid
+subreddit is given, the function should return 0.
+'''
 import requests
 
 
-def recurse(subreddit, hot_list=[]):
-    '''main function'''
-
-
-headers = {
-    'User-Agent': 'My User Agent 1.0'
-}
-params = {'limit': 10}
-
-
-def top_ten(subreddit):
+def recurse(subreddit, hot_list=[], after=""):
     '''Main function'''
+    headers = {
+    'User-Agent': 'My User Agent 1.0'
+    }
+    params = {'after': after, 'limit': 100}
+
+
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     res = requests.get(url, headers=headers, params=params,
                        allow_redirects=False)
     if res.status_code != 404:
         all = (res.json()['data']['children'])
-        print(all['data']['title'])
-        return
-    print(None)
+        all1 = (res.json()['data'])
+        for elements in all:
+            hot_list.append(elements['data']['title'])
+    after = all1.get('after')
+    if after is not None:
+        return recurse(subreddit, hot_list, after )
+    return hot_list
