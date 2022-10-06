@@ -1,10 +1,11 @@
 #Increase traffic
 
-exec { 'update_nginx':
+exec { 'ulimit':
   command => 'sed -i s/15/2000/ /etc/default/nginx',
-  path    => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/', 'usr/local/bin',],
-}
-exec { 'restart_nginx':
+  path    => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/'],
+} ->
+
+exec { 'restart':
   command => 'sudo service nginx restart',
-  path    => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/', 'usr/local/bin',],
+  path    => ['/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/'],
 }
